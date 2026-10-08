@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { getSupabase } from "../../lib/supabase";
 import type { PassengerType, PaymentType } from "../../lib/types";
@@ -92,8 +93,15 @@ export default function BookPage() {
   return (
     <div className="min-h-screen bg-slate-100 px-4 py-8">
       <div className="mx-auto w-full max-w-lg rounded-lg bg-white p-6 shadow-xl sm:p-8">
-        <h1 className="text-xl font-bold">Alliance Medical Transportation</h1>
-        <p className="mt-1 text-sm text-slate-500">
+        <Image
+          src="/logo.jpg"
+          alt="Alliance Medical Transportation logo"
+          width={96}
+          height={96}
+          className="mx-auto mb-4 rounded-lg"
+        />
+        <h1 className="text-center text-xl font-bold">Alliance Medical Transportation</h1>
+        <p className="mt-1 text-center text-sm text-slate-500">
           Request a ride — we&apos;ll confirm availability and pricing.
         </p>
 

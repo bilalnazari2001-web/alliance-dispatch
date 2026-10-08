@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAuth } from "../lib/auth";
@@ -24,12 +25,23 @@ export default function Sidebar() {
   return (
     <aside className="flex w-56 shrink-0 flex-col bg-slate-900 text-white">
       <div className="border-b border-slate-700 px-4 py-5">
-        <p className="text-sm font-bold leading-tight">
-          Alliance Medical
-          <br />
-          Transportation
-        </p>
-        <p className="mt-1 text-xs text-slate-400">Dispatch Platform</p>
+        <div className="flex items-center gap-3">
+          <Image
+            src="/logo.jpg"
+            alt="Alliance Medical Transportation logo"
+            width={52}
+            height={52}
+            className="rounded-md bg-white"
+          />
+          <div>
+            <p className="text-sm font-bold leading-tight">
+              Alliance Medical
+              <br />
+              Transportation
+            </p>
+            <p className="mt-1 text-xs text-slate-400">Dispatch Platform</p>
+          </div>
+        </div>
       </div>
       <nav className="flex-1 space-y-1 p-3">
         {links.map((link) => {

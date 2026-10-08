@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { useAuth } from "../../lib/auth";
 
@@ -22,8 +23,15 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-900 px-4">
       <div className="w-full max-w-sm rounded-lg bg-white p-8 shadow-xl">
-        <h1 className="text-xl font-bold">Alliance Medical Transportation</h1>
-        <p className="mt-1 text-sm text-slate-500">Dispatch platform sign in</p>
+        <Image
+          src="/logo.jpg"
+          alt="Alliance Medical Transportation logo"
+          width={96}
+          height={96}
+          className="mx-auto mb-4 rounded-lg"
+        />
+        <h1 className="text-center text-xl font-bold">Alliance Medical Transportation</h1>
+        <p className="mt-1 text-center text-sm text-slate-500">Dispatch platform sign in</p>
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           {error && (
             <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">
