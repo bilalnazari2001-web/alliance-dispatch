@@ -1,6 +1,7 @@
 export type Role = "admin" | "driver";
 
 export type TripStatus =
+  | "pending"
   | "scheduled"
   | "en_route"
   | "picked_up"
@@ -66,6 +67,7 @@ export interface ActivityLog {
 }
 
 export const TRIP_STATUSES: TripStatus[] = [
+  "pending",
   "scheduled",
   "en_route",
   "picked_up",
